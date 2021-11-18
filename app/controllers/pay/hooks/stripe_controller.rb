@@ -1,5 +1,5 @@
 module Pay
-  module Webhooks
+  module Hooks
     class StripeController < Pay::ApplicationController
       if Rails.application.config.action_controller.default_protect_from_forgery
         skip_before_action :verify_authenticity_token

@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pay
-  class PaddleControllerTest < ActionDispatch::IntegrationTest
+  class PaddleHooksControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
     setup do

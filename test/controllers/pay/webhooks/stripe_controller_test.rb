@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pay
-  class StripeWebhooksControllerTest < ActionDispatch::IntegrationTest
+  class StripeHooksControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
     setup do
@@ -30,7 +30,7 @@ module Pay
       }
 
       stripe_event = ::Stripe::Event.construct_from(params)
-      Pay::Webhooks::StripeController.any_instance.expects(:verified_event).returns(stripe_event)
+      Pay::Hooks::StripeController.any_instance.expects(:verified_event).returns(stripe_event)
       ::Stripe::Charge.expects(:retrieve).returns(stripe_event.data.object)
 
       pay_customer = pay_customers(:stripe)

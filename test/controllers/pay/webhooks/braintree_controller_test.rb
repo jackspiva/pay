@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pay
-  class BraintreeWebhooksControllerTest < ActionDispatch::IntegrationTest
+  class BraintreeHooksControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
     setup do
