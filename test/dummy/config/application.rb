@@ -14,7 +14,6 @@ module Dummy
 
     config.active_job.queue_adapter = :test
     config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
-    config.load_defaults "6.0" # enables zeitwerk mode in CRuby
-
+    config.autoloader = :zeitwerk
   end
 end
